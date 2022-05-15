@@ -55,3 +55,14 @@ obj = {
 let d: object;
 // it accepts, because array is also a certain type of object in js
 d = [1,2,3,4]
+
+// any
+let e: any;
+let arr: any[] = []
+arr.push('Mamun', 25)
+let ob: any;
+ob = {
+  name: 'Mamun',
+  age: 26,
+  adult: true
+}
