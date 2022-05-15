@@ -68,3 +68,9 @@ let numb = (a, b) => {
     return a + b;
 };
 console.log(numb(2, 4));
+const userDetails = (id, user) => {
+    console.log(`User name is ${user.name}, id: ${id}, age: ${user.age}`);
+};
+const sayHello = (user) => {
+    console.log(`Hello ${user.age > 30 ? 'Sir' : 'Mr.'} ${user.name}`);
+};

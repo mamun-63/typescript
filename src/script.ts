@@ -88,3 +88,24 @@ let numb = (a: number, b: number): number => {
   return a + b;
 }
 console.log(numb(2,4))
+
+
+/**  Type Aliases */
+
+// const userDetails = (id: string | number, user: { name: string, age: number }) => {
+//   console.log(`User name is ${user.name}, id: ${id}, age: ${user.age}`)
+// }
+// const sayHello = (user: { name: string, age: number }) => {
+//   console.log(`Hello ${user.age > 30 ? 'Sir' : 'Mr.'} ${user.name}`)
+// }
+
+type stringOrNum = string | number;
+type userType = { name: string, age: number }
+
+const userDetails = (id: stringOrNum, user: userType) => {
+  console.log(`User name is ${user.name}, id: ${id}, age: ${user.age}`)
+}
+
+const sayHello = (user: userType) => {
+  console.log(`Hello ${user.age > 30 ? 'Sir' : 'Mr.'} ${user.name}`)
+}
