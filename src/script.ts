@@ -66,3 +66,25 @@ ob = {
   age: 26,
   adult: true
 }
+
+/**  How to use Functions  */
+let myFunc: Function;
+myFunc = () => {
+  console.log('Hello! I am function.')
+}
+
+// c?: string  - optional
+let yourFunc = (a: string, b: string, c?: string, d: string = 'BR') => {
+  console.log(`Hey ${a} ${b} ${c} ${d}`)
+
+  // ts returns void default
+  // js - returns undefined
+  // void means nothing; undefined is value, but nothing defined
+  return a + b;
+}
+yourFunc('Mamun', 'Abdullah')
+
+let numb = (a: number, b: number): number => {
+  return a + b;
+}
+console.log(numb(2,4))
