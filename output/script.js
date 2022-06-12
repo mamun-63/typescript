@@ -74,3 +74,12 @@ const userDetails = (id, user) => {
 const sayHello = (user) => {
     console.log(`Hello ${user.age > 30 ? 'Sir' : 'Mr.'} ${user.name}`);
 };
+/** Functions signature */
+let calculations;
+calculations = (a, b, c) => {
+    if (c === 'add')
+        return a + b;
+    else
+        return a - b;
+};
+console.log(calculations(5, 16, 'add'));

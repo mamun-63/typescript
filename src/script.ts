@@ -109,3 +109,13 @@ const userDetails = (id: stringOrNum, user: userType) => {
 const sayHello = (user: userType) => {
   console.log(`Hello ${user.age > 30 ? 'Sir' : 'Mr.'} ${user.name}`)
 }
+
+
+/** Functions signature */
+let calculations: (x: number, y: number, z: string) => number
+calculations = (a: number, b: number, c: string) => {
+  if (c === 'add') return a + b;
+  else return a - b;
+}
+
+console.log(calculations(5,16,'add'))
