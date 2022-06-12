@@ -119,3 +119,40 @@ calculations = (a: number, b: number, c: string) => {
 }
 
 console.log(calculations(5,16,'add'))
+
+
+/** Class  */
+
+class Player {
+  private name: string; // Access Modifier
+  age: number;
+  readonly country: string;
+
+  constructor(n: string, a: number, c: string) {
+    this.name = n;
+    this.age = a;
+    this.country = c;
+  }
+
+  play () {
+    console.log(`${this.name} from ${this.country} is playing!`)
+  }
+}
+
+const mamun = new Player('Abdullah Al Mamun', 25, 'Bangladesh')
+const nuhas = new Player('Anjum Nuhas', 27, 'Bangladesh')
+
+// mamun.name = 'Rothi'
+mamun.age = 24;
+// mamun.country = 'Pakistan';
+// console.log(mamun.name)
+console.log(mamun.age)
+
+// private mode: no modification and access
+// readonly: can access but cant modify
+
+const players: Player[] = []
+players.push(mamun);
+players.push(nuhas);
+
+console.log(players)
