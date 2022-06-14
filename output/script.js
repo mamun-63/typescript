@@ -131,11 +131,105 @@ let threeDptions = {
     height: 15,
 };
 drawRectangle(threeDptions);
+/** Generics */
+// Reusable block of code
+// const addID = (obj: Object) => {
+//   let id = Math.floor(Math.random() * 100);
+//   return { ...obj, id };
+// };
+// let user = addID({
+//   name: "mamun",
+//   age: 26,
+//   country: "Bangladesh",
+// });
+// user. // not getting name or age
+// ______________
+// const addID = <T>(obj: T) => {
+//   let id = Math.floor(Math.random() * 100);
+//   return { ...obj, id };
+// };
+// let user = addID({
+//   name: "mamun",
+//   age: 26,
+//   country: "Bangladesh",
+// });
+// // user.age
+// // getting the type that is sending in addID
+// // The problem is can send the string type too.
+// let usr = "Mamun";
+// addID(usr); // it is accepting string too.
+// ______________
+// const addID = <T extends object>(obj: T) => {
+//   let id = Math.floor(Math.random() * 100);
+//   return { ...obj, id };
+// };
+// let user = addID({
+//   name: "mamun",
+//   age: 26,
+//   country: "Bangladesh",
+// });
+// // user.age
+// // getting the type that is sending in addID
+// // The problem is can send the string type too.
+// let usr = "Mamun";
+// addID(usr); // cant send string now
+// ______________
+// const addID = <
+//   T extends {
+//     name: string;
+//     age: number;
+//   }
+// >(
+//   obj: T
+// ) => {
+//   let id = Math.floor(Math.random() * 100);
+//   return { ...obj, id };
+// };
+// let user = addID({
+//   name: "mamun",
+//   age: 26,
+//   country: "Bangladesh",
+// });
+// ________ generic for interface
+// interface APIResponse {
+//   status: number;
+//   type: string;
+//   data: object;
+// }
+// const response1: APIResponse = {
+//   status: 200,
+//   type: "good",
+//   data: {
+//     name: "test",
+//     something: 300,
+//   },
+//   // but if we dont know what type of data is coming
+// };
+// but if we dont know what type of data is coming
+// interface APIResponse<T> {
+//   status: number;
+//   type: string;
+//   data: T;
+// }
+// const response1: APIResponse<object> = {
+//   status: 200,
+//   type: "good",
+//   data: {
+//     name: "test",
+//     something: 300,
+//   },
+// };
+/** Enum Type */
+var ResType;
+(function (ResType) {
+    ResType[ResType["SUCCESS"] = 0] = "SUCCESS";
+    ResType[ResType["FAILURE"] = 1] = "FAILURE";
+    ResType[ResType["UNAUTHENTICATED"] = 2] = "UNAUTHENTICATED";
+    ResType[ResType["FORBIDDEN"] = 3] = "FORBIDDEN";
+})(ResType || (ResType = {}));
 const response1 = {
     status: 200,
-    type: "good",
-    data: {
-        name: "test",
-        something: 300,
-    },
+    type: ResType.FAILURE,
+    data: "test data",
 };
+console.log(response1);

@@ -287,17 +287,40 @@ drawRectangle(threeDptions);
 
 // but if we dont know what type of data is coming
 
+// interface APIResponse<T> {
+//   status: number;
+//   type: string;
+//   data: T;
+// }
+
+// const response1: APIResponse<object> = {
+//   status: 200,
+//   type: "good",
+//   data: {
+//     name: "test",
+//     something: 300,
+//   },
+// };
+
+/** Enum Type */
+
+enum ResType {
+  SUCCESS,
+  FAILURE,
+  UNAUTHENTICATED,
+  FORBIDDEN,
+}
+
 interface APIResponse<T> {
   status: number;
-  type: string;
+  type: ResType;
   data: T;
 }
 
-const response1: APIResponse<object> = {
+const response1: APIResponse<string> = {
   status: 200,
-  type: "good",
-  data: {
-    name: "test",
-    something: 300,
-  },
+  type: ResType.FAILURE,
+  data: "test data",
 };
+
+console.log(response1);
