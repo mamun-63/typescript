@@ -324,3 +324,14 @@ const response1: APIResponse<string> = {
 };
 
 console.log(response1);
+
+/** tupes: not used more; but convenient for csv file read  */
+// like array, but order is important for type
+
+let ar = [3, "hello", { p: 3 }];
+ar[1] = 120;
+// ar[0] = false; // can assign different type
+
+let br: [number, string, object] = [4, "world", { t: 4 }];
+// br[1] = 4;
+// br.push() // push is not applicable as type is not defined
