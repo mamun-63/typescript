@@ -123,28 +123,30 @@ console.log(calculations(5,16,'add'))
 
 /** Class  */
 
-class Player {
-  // private name: string; // Access Modifier
-  // age: number;
-  // readonly country: string;
+// class Player {
+//   // private name: string; // Access Modifier
+//   // age: number;
+//   // readonly country: string;
 
-  // constructor(n: string, a: number, c: string) {
-  //   this.name = n;
-  //   this.age = a;
-  //   this.country = c;
-  // }
+//   // constructor(n: string, a: number, c: string) {
+//   //   this.name = n;
+//   //   this.age = a;
+//   //   this.country = c;
+//   // }
 
-  // if define access modifier then, can minimize 
-  constructor(
-    private name: string, 
-    public age: number,
-    readonly country: string
-    ) {}
+//   // if define access modifier then, can minimize 
+//   constructor(
+//     private name: string, 
+//     public age: number,
+//     readonly country: string
+//     ) {}
 
-  play () {
-    console.log(`${this.name} from ${this.country} is playing!`)
-  }
-}
+//   play () {
+//     console.log(`${this.name} from ${this.country} is playing!`)
+//   }
+// }
+
+import { Player } from "./classes/Player.js"
 
 const mamun = new Player('Abdullah Al Mamun', 25, 'Bangladesh')
 const nuhas = new Player('Anjum Nuhas', 27, 'Bangladesh')
@@ -163,3 +165,5 @@ players.push(mamun);
 players.push(nuhas);
 
 console.log(players)
+
+
