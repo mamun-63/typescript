@@ -131,3 +131,11 @@ let threeDptions = {
     height: 15,
 };
 drawRectangle(threeDptions);
+const response1 = {
+    status: 200,
+    type: "good",
+    data: {
+        name: "test",
+        something: 300,
+    },
+};
