@@ -85,10 +85,19 @@ calculations = (a, b, c) => {
 console.log(calculations(5, 16, 'add'));
 /** Class  */
 class Player {
-    constructor(n, a, c) {
-        this.name = n;
-        this.age = a;
-        this.country = c;
+    // private name: string; // Access Modifier
+    // age: number;
+    // readonly country: string;
+    // constructor(n: string, a: number, c: string) {
+    //   this.name = n;
+    //   this.age = a;
+    //   this.country = c;
+    // }
+    // if define access modifier then, can minimize 
+    constructor(name, age, country) {
+        this.name = name;
+        this.age = age;
+        this.country = country;
     }
     play() {
         console.log(`${this.name} from ${this.country} is playing!`);
